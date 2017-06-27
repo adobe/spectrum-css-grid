@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  title Spectrum CSS-Grid
+  link(rel="stylesheet", href="../dist/spectrum-css-grid.css")
+  link(rel="stylesheet", href="demo.css")
+  script(type="text/javascript",src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js")
+body
+  .spectrum-grid--fixed
+    h2 Fixed
+    p Fixed responsive grid.
+    .box-row(style="grid-column: 1/2;")
+    .box-row(style="grid-column: 2/3;")
+    .box-row(style="grid-column: 3/4;")
+    .box-row(style="grid-column: 4/5;")
+    .box-row(style="grid-column: 5/6;")
+    .box-row(style="grid-column: 6/7;")
+    .box-row(style="grid-column: 7/8;")
+    .box-row(style="grid-column: 8/9;")
+    .box-row(style="grid-column: 9/10;")
+    .box-row(style="grid-column: 10/11;")
+    .box-row(style="grid-column: 11/12;")
+    .box-row(style="grid-column: 12/13;")
+      
+    .box-row(style="grid-column: 1/4;")
+    .box-row(style="grid-column: 4/6;")
+    .box-row(style="grid-column: 6/13;")
+    pre.prettyprint
+      code.lang-css
+          :code
+            #element1 {grid-column: 1/4;}
+            #element2 {grid-column: 4/6;}
+            #element3 {grid-column: 6/13;}
+  .spectrum-grid--fluid
+      h2 Fluid
+      p Percent based widths allow fluid resizing of columns and rows.
+      .box-row(style="grid-column: 1/2;")
+      .box-row(style="grid-column: 2/3;")
+      .box-row(style="grid-column: 3/4;")
+      .box-row(style="grid-column: 4/5;")
+      .box-row(style="grid-column: 5/6;")
+      .box-row(style="grid-column: 6/7;")
+      .box-row(style="grid-column: 7/8;")
+      .box-row(style="grid-column: 8/9;")
+      .box-row(style="grid-column: 9/10;")
+      .box-row(style="grid-column: 10/11;")
+      .box-row(style="grid-column: 11/12;")
+      .box-row(style="grid-column: 12/13;")
+        
+      .box-row(style="grid-column: 1/4;")
+      .box-row(style="grid-column: 4/6;")
+      .box-row(style="grid-column: 6/13;")
+  .spectrum-grid--fixed
+    h2 Layouts in CSS
+    p All you need to remember is grid container, and grid-columns for your layout regions.
+    pre.prettyprint
+      code.lang-html
+          :code
+            <div class="spectrum-grid-row">
+              <div class="spectrum-grid-col-xs-12">
+                <div class="box">12</div>
+              </div>
+            </div>
+  
