@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Spectrum CSS-Grid</title>
+  <link rel="stylesheet" href="../dist/spectrum-css-grid.css"/>
+  <link rel="stylesheet" href="demo.css"/>
+  <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+  <div class="spectrum-grid--fixed">
+    <h2>Fixed</h2>
+    <p>Fixed responsive grid.</p>
+    <div class="box-row" style="grid-column: 1/2;"></div>
+    <div class="box-row" style="grid-column: 2/3;"></div>
+    <div class="box-row" style="grid-column: 3/4;"></div>
+    <div class="box-row" style="grid-column: 4/5;"></div>
+    <div class="box-row" style="grid-column: 5/6;"></div>
+    <div class="box-row" style="grid-column: 6/7;"></div>
+    <div class="box-row" style="grid-column: 7/8;"></div>
+    <div class="box-row" style="grid-column: 8/9;"></div>
+    <div class="box-row" style="grid-column: 9/10;"></div>
+    <div class="box-row" style="grid-column: 10/11;"></div>
+    <div class="box-row" style="grid-column: 11/12;"></div>
+    <div class="box-row" style="grid-column: 12/13;"></div>
+    <div class="box-row" style="grid-column: 1/4;"></div>
+    <div class="box-row" style="grid-column: 4/6;"></div>
+    <div class="box-row" style="grid-column: 6/13;"></div>
+    <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 1/4;}
+#element2 {grid-column: 4/6;}
+#element3 {grid-column: 6/13;}</code></pre>
+  </div>
+  <div class="spectrum-grid--fluid">
+    <h2>Fluid</h2>
+    <p>Percent based widths allow fluid resizing of columns and rows.</p>
+    <div class="box-row" style="grid-column: 1/2;"></div>
+    <div class="box-row" style="grid-column: 2/3;"></div>
+    <div class="box-row" style="grid-column: 3/4;"></div>
+    <div class="box-row" style="grid-column: 4/5;"></div>
+    <div class="box-row" style="grid-column: 5/6;"></div>
+    <div class="box-row" style="grid-column: 6/7;"></div>
+    <div class="box-row" style="grid-column: 7/8;"></div>
+    <div class="box-row" style="grid-column: 8/9;"></div>
+    <div class="box-row" style="grid-column: 9/10;"></div>
+    <div class="box-row" style="grid-column: 10/11;"></div>
+    <div class="box-row" style="grid-column: 11/12;"></div>
+    <div class="box-row" style="grid-column: 12/13;"></div>
+    <div class="box-row" style="grid-column: 1/4;"></div>
+    <div class="box-row" style="grid-column: 4/6;"></div>
+    <div class="box-row" style="grid-column: 6/13;"></div>
+  </div>
+  <div class="spectrum-grid--fixed">
+    <h2>Layouts in CSS</h2>
+    <p>All you need to remember is grid container, and grid-columns for your layout regions.</p>
+    <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;spectrum-grid-row&quot;&gt;
+  &lt;div class=&quot;spectrum-grid-col-xs-12&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;12&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</body>
