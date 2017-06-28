@@ -32,16 +32,13 @@
   grid-column-gap: var(--spectrum-gutter-width);
   grid-row-gap: 0;
   grid-template-columns: repeat(12, 1fr);
-  margin: 0;
+  margin: 0 auto;
   padding: 0 var(--spectrum-margin-width);
   grid-auto-rows: minmax(var(--spectrum-baseline), max-content);
   align-content: start; }
 
 .spectrum-grid--fixed {
-  max-width: 1280px;
-  margin: 0 auto; }
+  max-width: 1280px; }
 
 .spectrum-grid--fluid {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto; }
+  width: 100%; }
