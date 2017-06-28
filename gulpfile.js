@@ -26,16 +26,16 @@ gulp.task('styles:dist', ['clean'], function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('pug:demo', function () {
-  return gulp.src('./demo/*.pug')
+gulp.task('pug:docs', function () {
+  return gulp.src('./docs/*.pug')
     .pipe(gulpPug({
       // pug: pug,
       pretty: true
     }))
-    .pipe(gulp.dest('./demo/'));
+    .pipe(gulp.dest('./docs/'));
 });
-gulp.task('styles:demo', function () {
-  return gulp.src('demo/sass/*')
+gulp.task('styles:docs', function () {
+  return gulp.src('docs/sass/*')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       outputStyle: 'nested',
@@ -44,14 +44,14 @@ gulp.task('styles:demo', function () {
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('demo'));
+    .pipe(gulp.dest('docs'));
 });
-gulp.task('watch', ['pug:demo', 'styles:demo', 'styles:dist'], function () {
+gulp.task('watch', ['pug:docs', 'styles:docs', 'styles:dist'], function () {
   // watch for changes
-  gulp.watch('demo/*.pug', ['pug:demo']);
+  gulp.watch('docs/*.pug', ['pug:docs']);
   gulp.watch('*.scss', ['styles:dist']);
   gulp.watch('bower_components/**/*.scss', ['styles:dist']);
-  gulp.watch('demo/sass/*.scss', ['styles:demo']);
+  gulp.watch('docs/sass/*.scss', ['styles:docs']);
   gulp.watch('bower.json', ['wiredep']);
 });
 gulp.task('default', function () {

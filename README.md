@@ -5,9 +5,21 @@ CSS-Grid property specs for the [Spectrum][spectrum-link] Design Language.
 ## Usage
 Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid properties for your layout regions or page layouts.
 
+Layout regions need to exist as immediate children to the container (`spectrum-grid--fluid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
+
 ### Example
+HTML
 ```
-.example {grid-column: 1/4;}
+<main class="spectrum-grid--fluid">
+  <div id="example1"></div>
+  <div id="example2"></div>
+</main>
+```
+
+CSS
+```
+#example1 {grid-column: 1/5;}
+#example1 {grid-column: 5/13;}
 
 ```
 
