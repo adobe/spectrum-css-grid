@@ -26,6 +26,11 @@ gulp.task('styles:dist', ['clean'], function () {
     .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('styles:copy', ['styles:dist'], function (){
+  return gulp.src('./dist/spectrum-css-grid.css')
+    .pipe(gulp.dest('./docs/'));
+})
+
 gulp.task('pug:docs', function () {
   return gulp.src('./docs/*.pug')
     .pipe(gulpPug({
@@ -34,7 +39,7 @@ gulp.task('pug:docs', function () {
     }))
     .pipe(gulp.dest('./docs/'));
 });
-gulp.task('styles:docs', function () {
+gulp.task('styles:docs', ['styles:copy'], function () {
   return gulp.src('docs/sass/*')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
