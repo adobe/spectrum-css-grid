@@ -7,6 +7,8 @@ Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid pro
 
 Layout regions need to exist as immediate children to the container (`spectrum-grid--fluid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
 
+Check out the [demo page](https://git.corp.adobe.com/pages/Spectrum/spectrum-css-grid/) with examples of the grid system.
+
 ### Example
 HTML
 ```
