@@ -53,11 +53,9 @@
   </div>
   <div class="spectrum-grid--fixed">
     <h2>Layouts in CSS</h2>
-    <p>All you need to remember is grid container, and grid-columns for your layout regions.</p>
-    <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;spectrum-grid-row&quot;&gt;
-  &lt;div class=&quot;spectrum-grid-col-xs-12&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;12&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    <p>All you need to remember is grid container and layout regions defined in your CSS.</p>
+    <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;spectrum-grid--fluid&quot;&gt;
+  &lt;div id=&quot;element1&quot;&gt; Layout Region &lt;/div&gt;
+&lt;/div&gt;</code><br/><br/><code class="lang-css">#element1 {grid-columns: 1/6;}</code></pre>
   </div>
 </body>

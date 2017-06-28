@@ -55,13 +55,16 @@ body
       .box-row(style="grid-column: 6/13;")
   .spectrum-grid--fixed
     h2 Layouts in CSS
-    p All you need to remember is grid container, and grid-columns for your layout regions.
+    p All you need to remember is grid container and layout regions defined in your CSS.
     pre.prettyprint
       code.lang-html
           :code
-            <div class="spectrum-grid-row">
-              <div class="spectrum-grid-col-xs-12">
-                <div class="box">12</div>
-              </div>
+            <div class="spectrum-grid--fluid">
+              <div id="element1"> Layout Region </div>
             </div>
+      br
+      br
+      code.lang-css
+          :code
+            #element1 {grid-columns: 1/6;}
   
