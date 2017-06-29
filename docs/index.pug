@@ -53,7 +53,136 @@ body
       .box-row(style="grid-column: 1/4;")
       .box-row(style="grid-column: 4/6;")
       .box-row(style="grid-column: 6/13;")
-  .spectrum-grid--fixed
+  // Offsets
+  .spectrum-grid--fluid
+      h2 Offsets
+      p Offsetting placement of layout region. Simply define the `grid-column-start` property with the column you want the layout region to begin.
+      .box-row(style="grid-column: 12/13;")
+      .box-row(style="grid-column: 11/13;")
+      .box-row(style="grid-column: 10/13;")
+      .box-row(style="grid-column: 9/13;")
+      .box-row(style="grid-column: 8/13;")
+      .box-row(style="grid-column: 7/13;")
+      .box-row(style="grid-column: 6/13;")
+      .box-row(style="grid-column: 5/13;")
+      .box-row(style="grid-column: 4/13;")
+      .box-row(style="grid-column: 3/13;")
+      .box-row(style="grid-column: 2/13;")
+      .box-row(style="grid-column: 1/13;")
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-column: 10/13;}
+  // Nested Grids
+  .spectrum-grid--fluid
+      h2 Nested Grids
+      p Nest grids inside grids inside grids.
+      .box-row(style="grid-column: 1/7;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/4")
+          .box-nested(style="grid-column: 4/10")
+          .box-nested(style="grid-column: 10/13")
+      .box-row(style="grid-column: 7/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/7")
+          .box-nested(style="grid-column: 7/13")
+      pre.prettyprint
+        code.lang-html
+            :code
+              <main class="spectrum-grid--fluid">
+                <div id="container1">
+                  <div class="spectrum-grid--fluid">
+                    <div id="element1"></div>
+                  </div>
+                </div>
+                <div id="container2">
+                  <div class="spectrum-grid--fluid">
+                    <div id="element2"></div>
+                  </div>
+                </div>
+
+  .spectrum-grid--fluid
+      h2 Alignment
+      p Align elements to the start or end of a row as well as the top, bottom, or center of a column.
+      p Row alignments are done by specifying `grid-column-start` and `grid-column-end` properties. Column alignment is specified by the `grid-row` property.
+      h3 Start of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/7;")
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-column: 1/7;}
+      
+      h3 Center of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 4/10;")
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-column: 1/7;}
+              
+      h3 End of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 7/13;")
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-column: 1/7;}
+      
+      // Vertical alignment 
+      h3 Top of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/7; grid-row: 1/10")
+          .box-nested(style="grid-column: 7/13; grid-row: 1/2")
+
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-row: 1/2;}
+      
+      h3 Middle of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/7; grid-row: 1/10")
+          .box-nested(style="grid-column: 7/13; grid-row: 4/6")
+
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-row: 4/6;}
+              
+      h3 End of row
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/7; grid-row: 1/10")
+          .box-nested(style="grid-column: 7/13; grid-row: 6/10")
+
+      pre.prettyprint
+        code.lang-css
+            :code
+              #element1 {grid-row: 6/10;}
+
+  .spectrum-grid--fluid
+      h2 Distribution
+      p Distributing layout regions is also done by defining `grid-column` start and end properties.
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 1/4;")
+          .box-nested(style="grid-column: 6/8;")
+          .box-nested(style="grid-column: 10/13;")
+      .box-row(style="grid-column: 1/13;")
+        .spectrum-grid--fluid
+          .box-nested(style="grid-column: 2/5;")
+          .box-nested(style="grid-column: 6/8;")
+          .box-nested(style="grid-column: 9/12;")
+          
+              
+                  
+  .spectrum-grid--fluid
     h2 Layouts in CSS
     p All you need to remember is grid container and layout regions defined in your CSS.
     pre.prettyprint
