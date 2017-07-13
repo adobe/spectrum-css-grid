@@ -44,7 +44,7 @@
 	display: grid;
 	grid-column-gap: var(--spectrum-gutter-width);
 	grid-row-gap: 0;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat($spectrum-global-layout-grid-columns, 1fr);
 	margin: 0 auto;
 	padding: 0 var(--spectrum-margin-width);
 	grid-auto-rows: minmax(var(--spectrum-baseline), max-content);
