@@ -1,7 +1,25 @@
 {
   "name": "@spectrum/spectrum-css-grid",
   "version": "0.0.1",
+  "description": "CSS Grid specs as defined in Spectrum DNA",
+  "style": "dist/spectrum-css-grid.css",
+  "main": "dist/spectrum-flexbox-grid.css",
+  "scripts": {
+      "install": "npm run build:origins",
+      "build:origins": "balthazar --config ./balthazar-config.json --origin ./node_modules/@spectrum/spectrum-origins/src/ --destination ./src/spectrum-origins/ --type sass",
+      "release": "dna-npm-bump-version && dna-npm-release",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:spectrum/spectrum-css-grid.git"
+  },
+  "author": "Grp-AD-Spectrum-Team <Grp-AD-Spectrum-Team@adobe.com>",
+  "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
+    "@spectrum/balthazar": "^0.5.x",
+    "@spectrum/dna-npm-release": "^1.0.0",
+    "@spectrum/spectrum-origins": "^0.5.7",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-pug": "^3.3.0",

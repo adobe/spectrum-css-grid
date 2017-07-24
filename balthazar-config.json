@@ -1,0 +1,14 @@
+{
+  "global": {
+    "namespace": "spectrum-"
+  },
+
+  "colorStops": [
+    "light"
+  ],
+
+  "includes": [
+    "global/layout.json",
+    "aliases/layout.json"
+  ]
+}
