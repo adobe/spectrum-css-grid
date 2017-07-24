@@ -1,4 +1,4 @@
-@import '_dna-variables';
+@import 'spectrum-origins/spectrum-light.sass';
 
 @media screen and (min-width: $spectrum-global-layout-breakpoint-xsmall) {
 	:root {
@@ -37,7 +37,7 @@
 
 /* Baseline Grid */
 :root {
-	--spectrum-baseline: $spectrum-global-layout-spacing-medium;
+	--spectrum-baseline: $spectrum-global-layout-size-100;
 }
 
 .spectrum-grid {
