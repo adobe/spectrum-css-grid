@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "description": "CSS Grid specs as defined in Spectrum DNA",
   "style": "dist/spectrum-css-grid.css",
-  "main": "dist/spectrum-flexbox-grid.css",
+  "main": "dist/spectrum-css-grid.css",
   "scripts": {
-      "install": "npm run build:origins",
-      "build:origins": "balthazar --config ./balthazar-config.json --origin ./node_modules/@spectrum/spectrum-origins/src/ --destination ./src/spectrum-origins/ --type sass",
-      "release": "dna-npm-bump-version && dna-npm-release",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "build:origins": "balthazar --config ./balthazar-config.json --origin ./node_modules/@spectrum/spectrum-origins/src/ --destination ./src/spectrum-origins/ --type sass",
+    "release": "dna-npm-bump-version && dna-npm-release",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
     "gulp-load-plugins": "^1.5.0",
     "gulp-pug": "^3.3.0",
     "gulp-rimraf": "^0.2.1",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.3.0",
     "pug": "^2.0.0-rc.2",

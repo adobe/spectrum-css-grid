@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     pug = require('pug'),
     gulpPug = require('gulp-pug');
 
+var run = require('gulp-run');
+
 pug.filters.code = function( block ) {
     return block
         .replace( /&/g, '&amp;' )
@@ -19,8 +21,12 @@ gulp.task('clean', function (cb) {
    rimraf('./dist/', cb);
 });
 
+gulp.task('origins', function() {
+  return run('npm run build:origins').exec();
+})
+
 // Get one .styl file and render
-gulp.task('styles:dist', ['clean'], function () {
+gulp.task('styles:dist', ['clean', 'origins'], function () {
   return gulp.src('./src/spectrum-css-grid.scss')
     .pipe(sass())
     .pipe(gulp.dest('./dist/'));
