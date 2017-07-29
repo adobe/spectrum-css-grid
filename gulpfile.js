@@ -27,7 +27,7 @@ gulp.task('origins', function() {
 
 // Get one .styl file and render
 gulp.task('styles:dist', ['clean', 'origins'], function () {
-  return gulp.src('./src/spectrum-css-grid.scss')
+  return gulp.src(['./src/spectrum-css-grid.scss', './src/spectrum-css-grid-vars.scss'])
     .pipe(sass())
     .pipe(gulp.dest('./dist/'));
 });
