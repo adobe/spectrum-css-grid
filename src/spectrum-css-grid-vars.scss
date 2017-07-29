@@ -1,0 +1,62 @@
+@import 'spectrum-origins/spectrum-light.sass';
+
+@media screen and (min-width: $spectrum-global-layout-breakpoint-xsmall) {
+	:root {
+		--spectrum-gutter-width: $spectrum-alias-grid-gutter-xsmall;
+		--spectrum-margin-width: $spectrum-alias-grid-gutter-xsmall;
+	}
+}
+
+@media screen and (min-width: $spectrum-global-layout-breakpoint-small) {
+	:root {
+		--spectrum-gutter-width: $spectrum-alias-grid-gutter-small;
+		--spectrum-margin-width: $spectrum-alias-grid-gutter-small;
+	}
+}
+
+@media screen and (min-width: $spectrum-global-layout-breakpoint-medium) {
+	:root {
+		--spectrum-gutter-width: $spectrum-alias-grid-gutter-medium;
+		--spectrum-margin-width: $spectrum-alias-grid-gutter-medium;
+	}
+}
+
+@media screen and (min-width: $spectrum-global-layout-breakpoint-large) {
+	:root {
+		--spectrum-gutter-width: $spectrum-alias-grid-gutter-large;
+		--spectrum-margin-width: $spectrum-alias-grid-gutter-large;
+	}
+}
+
+@media screen and (min-width: $spectrum-global-layout-breakpoint-xlarge) {
+	:root {
+		--spectrum-gutter-width: $spectrum-alias-grid-gutter-xlarge;
+		--spectrum-margin-width: $spectrum-alias-grid-gutter-xlarge;
+	}
+}
+
+/* Baseline Grid */
+:root {
+	--spectrum-baseline: $spectrum-global-layout-size-100;
+}
+
+.spectrum-grid {
+	display: grid;
+	grid-column-gap: var(--spectrum-gutter-width);
+	grid-row-gap: 0;
+	grid-template-columns: repeat($spectrum-global-layout-grid-columns, 1fr);
+	margin: 0 auto;
+	padding: 0 var(--spectrum-margin-width);
+	grid-auto-rows: minmax(var(--spectrum-baseline), max-content);
+	align-content: start;
+}
+
+.spectrum-grid--fixed {
+  @extend .spectrum-grid;
+  max-width: $spectrum-global-layout-grid-fixed-max-width;
+}
+
+.spectrum-grid--fluid {
+  @extend .spectrum-grid;
+  width: $spectrum-global-layout-grid-fluid-width;
+}
