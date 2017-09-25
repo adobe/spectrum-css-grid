@@ -57,7 +57,10 @@ gulp.task('styles:docs', ['styles:copy'], function () {
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('docs'));
 });
-gulp.task('watch', ['pug:docs', 'styles:docs', 'styles:dist'], function () {
+
+gulp.task('build', ['pug:docs', 'styles:docs', 'styles:dist'], function () {});
+
+gulp.task('watch', ['build'], function () {
   // watch for changes
   gulp.watch('docs/*.pug', ['pug:docs']);
   gulp.watch('*.scss', ['styles:dist']);
@@ -65,6 +68,7 @@ gulp.task('watch', ['pug:docs', 'styles:docs', 'styles:dist'], function () {
   gulp.watch('docs/sass/*.scss', ['styles:docs']);
   gulp.watch('bower.json', ['wiredep']);
 });
+
 gulp.task('default', function () {
-  gulp.start('watch');
+  gulp.start('build');
 });
