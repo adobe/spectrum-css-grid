@@ -16,9 +16,9 @@
   "author": "Grp-AD-Spectrum-Team <Grp-AD-Spectrum-Team@adobe.com>",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "@spectrum/balthazar": "^0.5.x",
-    "@spectrum/dna-npm-release": "^1.0.0",
-    "@spectrum/spectrum-origins": "^0.5.7",
+    "@spectrum/balthazar": "^1.1.x",
+    "@spectrum/dna-npm-release": "^1.2.x",
+    "@spectrum/spectrum-origins": "^1.2.x",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-pug": "^3.3.0",
