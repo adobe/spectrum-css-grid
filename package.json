@@ -5,6 +5,7 @@
   "style": "dist/spectrum-css-grid.css",
   "main": "dist/spectrum-css-grid.css",
   "scripts": {
+    "build": "gulp",
     "build:origins": "balthazar --config ./balthazar-config.json --origin ./node_modules/@spectrum/spectrum-origins/src/ --destination ./src/spectrum-origins/ --type sass",
     "bump": "dna-npm-bump-version",
     "release:snapshot": "run-s build bump publish:snapshot",
