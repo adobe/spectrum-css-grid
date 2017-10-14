@@ -1,2 +1,11 @@
-/node_modules
-/src
+.git/
+src/
+test/
+logs
+*.log
+.babelrc
+.editorconfig
+.eslintrc
+.gitignore
+.npmrc
+
