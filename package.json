@@ -22,17 +22,17 @@
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "@spectrum/balthazar": "^1.1.x",
-    "@spectrum/dna-npm-release": "^1.2.x",
-    "@spectrum/spectrum-origins": "^1.2.x",
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-rimraf": "^0.2.1",
-    "gulp-run": "^1.7.1",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.3.0",
-    "npm-run-all": "^4.1.1",
-    "pug": "^2.0.0-rc.2",
-    "rimraf": "^2.6.1"
+    "@spectrum/dna-npm-release": "^1.x",
+    "@spectrum/spectrum-origins": "^1.x",
+    "gulp": "^3.x",
+    "gulp-load-plugins": "^1.x",
+    "gulp-pug": "^3.x",
+    "gulp-rimraf": "^0.x",
+    "gulp-run": "^1.x",
+    "gulp-sass": "^2.x",
+    "gulp-sourcemaps": "^1.x",
+    "npm-run-all": "^4.x",
+    "pug": "^2.0.0-rc",
+    "rimraf": "^2.x"
   }
 }
