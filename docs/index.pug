@@ -7,9 +7,16 @@ head
   link(rel="stylesheet", href="spectrum-css-grid.css")
   link(rel="stylesheet", href="demo.css")
   script(type="text/javascript",src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js")
-body
-  h1.main-title Spectrum CSS-Grid Demo
+body  
   .spectrum-grid--fixed
+    .header 
+      .header-logo 
+        include spectrum_logo.svg
+      .header-repoLink
+        a(href="https://git.corp.adobe.com/Spectrum/spectrum-css-grid/" target="_blank") Spectrum-CSS-Grid Repository
+    br
+    h1.main-title Spectrum CSS-Grid Demo
+    
     h2 Fixed
     p Fixed responsive grid.
     .box-row(style="grid-column: 1/2;")
