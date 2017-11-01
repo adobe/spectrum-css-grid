@@ -5,7 +5,7 @@
 }
 
 $huge-blue: #294b69;
-$huge-magenta: #ec008c;
+$huge-magenta: rgb(20, 115, 230);
 $huge-gray: #808080;
 
 body {
@@ -16,9 +16,6 @@ body {
   padding: 0;
 }
 
-.magenta {
-  color: $huge-magenta;
-}
 
 .box, .box-first, .box-large, .box-nested, .box-row {
   position: relative;
@@ -374,4 +371,22 @@ main.inner {
 }
 main.home {
     padding-top: 0
+}
+
+.header {
+  display: flex;
+  margin-top: 32px;
+  grid-column: 1/12;
+}
+.header-logo {
+  display: inline-block;
+  margin-right: 16px;
+  width: auto;
+}
+.header-logo svg {
+  height: 32px;
+  width: auto;
+}
+.header-repoLink {
+  display: inline-block;
 }
