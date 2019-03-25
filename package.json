@@ -38,7 +38,6 @@
     "gulp-rename": "^1.x",
     "gulp-replace": "^0.x",
     "gulp-rimraf": "^0.2.2",
-    "gulp-run": "^1.x",
     "gulp-sass": "^4.x",
     "gulp-sourcemaps": "^2.6.5",
     "npm-run-all": "^4.1.5",

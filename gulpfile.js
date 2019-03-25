@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const path = require('path');
-const del = require('rimraf');
 const $ = require('gulp-load-plugins')();
 const sass = require('gulp-sass');
 const pug = require('pug');
@@ -8,11 +7,7 @@ const gulpPug = require('gulp-pug');
 const log = require('fancy-log');
 const Balthazar = require('@spectrum/balthazar');
 const deleteDirectory = require('del');
-
-var run = require('gulp-run');
-
-
-
+const rimraf = require('rimraf');
 
 /*******************************************************
 Build Source 
@@ -21,7 +16,7 @@ Build Source
 // this is the basis for the rewrite
 gulp.task('generate-dna', function(done) {
 
-  const CSS_OUTPUT_TYPE = Balthazar.OUTPUT_TYPES.sass;
+  const BALTHAZAR_CONFIG = Balthazar.OUTPUT_TYPES.sass;
   const destDir = path.resolve('src', 'spectrum-origins');
 
   deleteDirectory(destDir)
@@ -29,7 +24,7 @@ gulp.task('generate-dna', function(done) {
         // the api for convert is destination, type, path-to-json
         log.info('[build:gulp-example] Starting Balthazar.convertVars');
         // default path to json will look for node_modules/@spectrum/spectrum-dna locally
-        return Balthazar.convertVars(destDir, CSS_OUTPUT_TYPE);
+        return Balthazar.convertVars(destDir, BALTHAZAR_CONFIG);
     })
     .then(files => {
       log.info(`[build:gulp-example] Balthazar created ${files.length} files.`);
@@ -48,7 +43,7 @@ Build Dist
 ********************************************************/ 
 
 // Clean up dist directory 
-var rimraf = require('rimraf');
+
 gulp.task('clean', gulp.series(function (cb) {
    rimraf('./dist/', cb);
 }));
@@ -103,20 +98,19 @@ gulp.task('styles:docs', gulp.series('styles:copy', function () {
 }));
 
 /*******************************************************
-Development 
-********************************************************/ 
-
-// gulp.task('watch', gulp.series('build', function () {
-//   // watch for changes
-//   gulp.watch('docs/*.pug', ['pug:docs']);
-//   gulp.watch('*.scss', ['styles:dist']);
-//   gulp.watch('docs/sass/*.scss', ['styles:docs']);
-// }));
-
-/*******************************************************
 Publishing 
 ********************************************************/ 
 
 gulp.task('build', gulp.series('pug:docs', 'styles:docs', 'styles:dist'));
+gulp.task('default', gulp.series('build'));
 
-// gulp.task('default', gulp.series('build'));
+/*******************************************************
+Development 
+********************************************************/ 
+
+gulp.task('watch', gulp.series('build', function () {
+  // watch for changes
+  gulp.watch('docs/*.pug', gulp.series('pug:docs'));
+  gulp.watch('*.scss', gulp.series('styles:dist'));
+  gulp.watch('docs/sass/*.scss', gulp.series('styles:docs'));
+}));
