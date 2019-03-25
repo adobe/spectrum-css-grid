@@ -1,41 +1,77 @@
-var gulp = require('gulp'),
-    del = require('rimraf'),
-    $ = require('gulp-load-plugins')(),
-    sass = require('gulp-sass'),
-    pug = require('pug'),
-    gulpPug = require('gulp-pug');
+const gulp = require('gulp');
+const path = require('path');
+const del = require('rimraf');
+const $ = require('gulp-load-plugins')();
+const sass = require('gulp-sass');
+const pug = require('pug');
+const gulpPug = require('gulp-pug');
+const log = require('fancy-log');
+const Balthazar = require('@spectrum/balthazar');
+const deleteDirectory = require('del');
 
 var run = require('gulp-run');
 
-pug.filters.code = function( block ) {
-    return block
-        .replace( /&/g, '&amp;' )
-        .replace( /</g, '&lt;' )
-        .replace( />/g, '&gt;' )
-        .replace( /"/g, '&quot;' );
-  };
 
 
-var rimraf = require('rimraf');
-gulp.task('clean', function (cb) {
-   rimraf('./dist/', cb);
+
+/*******************************************************
+Build Source 
+********************************************************/ 
+
+// this is the basis for the rewrite
+gulp.task('generate-dna', function(done) {
+
+  const CSS_OUTPUT_TYPE = Balthazar.OUTPUT_TYPES.sass;
+  const destDir = path.resolve('src', 'spectrum-origins');
+
+  deleteDirectory(destDir)
+    .then(() => {
+        // the api for convert is destination, type, path-to-json
+        log.info('[build:gulp-example] Starting Balthazar.convertVars');
+        // default path to json will look for node_modules/@spectrum/spectrum-dna locally
+        return Balthazar.convertVars(destDir, CSS_OUTPUT_TYPE);
+    })
+    .then(files => {
+      log.info(`[build:gulp-example] Balthazar created ${files.length} files.`);
+      done();
+    })
+    .catch(error => {
+      log.warn('[build:gulp-example] Error caught processing with balthazar!');
+      log.error(error);
+      process.exit(1);
+    });
+
 });
 
-gulp.task('origins', function() {
-  return run('npm run build:origins').exec();
-})
+/*******************************************************
+Build Dist 
+********************************************************/ 
+
+// Clean up dist directory 
+var rimraf = require('rimraf');
+gulp.task('clean', gulp.series(function (cb) {
+   rimraf('./dist/', cb);
+}));
 
 // Get one .styl file and render
-gulp.task('styles:dist', ['clean', 'origins'], function () {
+gulp.task('styles:dist', gulp.series('clean', 'generate-dna', function () {
   return gulp.src(['./src/spectrum-css-grid.scss', './src/spectrum-css-grid-vars.scss'])
     .pipe(sass())
     .pipe(gulp.dest('./dist/'));
-});
+}));
 
-gulp.task('styles:copy', ['styles:dist'], function (){
-  return gulp.src('./dist/spectrum-css-grid.css')
-    .pipe(gulp.dest('./docs/'));
-})
+/*******************************************************
+Build Docs 
+********************************************************/ 
+
+// Render Pug
+pug.filters.code = function( block ) {
+  return block
+      .replace( /&/g, '&amp;' )
+      .replace( /</g, '&lt;' )
+      .replace( />/g, '&gt;' )
+      .replace( /"/g, '&quot;' );
+};
 
 gulp.task('pug:docs', function () {
   return gulp.src('./docs/*.pug')
@@ -45,7 +81,15 @@ gulp.task('pug:docs', function () {
     }))
     .pipe(gulp.dest('./docs/'));
 });
-gulp.task('styles:docs', ['styles:copy'], function () {
+
+// Package styles
+gulp.task('styles:copy', gulp.series('styles:dist', function (){
+  return gulp.src('./dist/spectrum-css-grid.css')
+    .pipe(gulp.dest('./docs/'));
+}));
+
+// Build docs styles 
+gulp.task('styles:docs', gulp.series('styles:copy', function () {
   return gulp.src('docs/sass/*')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
@@ -56,19 +100,23 @@ gulp.task('styles:docs', ['styles:copy'], function () {
     }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('docs'));
-});
+}));
 
-gulp.task('build', ['pug:docs', 'styles:docs', 'styles:dist'], function () {});
+/*******************************************************
+Development 
+********************************************************/ 
 
-gulp.task('watch', ['build'], function () {
-  // watch for changes
-  gulp.watch('docs/*.pug', ['pug:docs']);
-  gulp.watch('*.scss', ['styles:dist']);
-  gulp.watch('bower_components/**/*.scss', ['styles:dist']);
-  gulp.watch('docs/sass/*.scss', ['styles:docs']);
-  gulp.watch('bower.json', ['wiredep']);
-});
+// gulp.task('watch', gulp.series('build', function () {
+//   // watch for changes
+//   gulp.watch('docs/*.pug', ['pug:docs']);
+//   gulp.watch('*.scss', ['styles:dist']);
+//   gulp.watch('docs/sass/*.scss', ['styles:docs']);
+// }));
 
-gulp.task('default', function () {
-  gulp.start('build');
-});
+/*******************************************************
+Publishing 
+********************************************************/ 
+
+gulp.task('build', gulp.series('pug:docs', 'styles:docs', 'styles:dist'));
+
+// gulp.task('default', gulp.series('build'));
