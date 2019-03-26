@@ -1,34 +1,41 @@
 /* generated from dna-version: 5.10.0 */
-.spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-  display: grid;
-  grid-row-gap: 0;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 0 auto;
-  grid-auto-rows: minmax(8px, max-content);
-  align-content: start; }
-  @media screen and (min-width: 304px) {
-    .spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-      grid-column-gap: 16px;
-      padding: 0 16px; } }
-  @media screen and (min-width: 768px) {
-    .spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-      grid-column-gap: 24px;
-      padding: 0 24px; } }
-  @media screen and (min-width: 1280px) {
-    .spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-      grid-column-gap: 32px;
-      padding: 0 32px; } }
-  @media screen and (min-width: 1768px) {
-    .spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-      grid-column-gap: 40px;
-      padding: 0 40px; } }
-  @media screen and (min-width: 2160px) {
-    .spectrum-grid, .spectrum-grid--fixed, .spectrum-grid--fluid {
-      grid-column-gap: 48px;
-      padding: 0 48px; } }
-
 .spectrum-grid--fixed {
-  max-width: 1280px; }
+  max-width: 1280px;
+  padding: 16px; }
 
 .spectrum-grid--fluid {
-  width: 100%; }
+  width: 100%;
+  padding: 16px; }
+
+@supports (grid-template-areas: ".") and (--foo: "bar") {
+  :root {
+    --spectrum-baseline: 8px;
+    --spectrum-column-count: 12;
+    --spectrum-gutter-width: 16px;
+    --spectrum-margin-width: 16px; }
+  @media screen and (min-width: 304px) {
+    .spectrum-grid {
+      display: grid;
+      padding: 0 var(--spectrum-margin-width);
+      margin: 0 auto;
+      grid-row-gap: 0;
+      grid-template-columns: repeat(var(--spectrum-column-count), 1fr);
+      grid-auto-rows: minmax(var(--spectrum-baseline), max-content);
+      grid-column-gap: var(--spectrum-gutter-width);
+      align-content: start; } }
+  @media screen and (min-width: 768px) {
+    :root {
+      --spectrum-gutter-width: 24px;
+      --spectrum-margin-width: 24px; } }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --spectrum-gutter-width: 32px;
+      --spectrum-margin-width: 32px; } }
+  @media screen and (min-width: 1768px) {
+    :root {
+      --spectrum-gutter-width: 40px;
+      --spectrum-margin-width: 40px; } }
+  @media screen and (min-width: 2160px) {
+    :root {
+      --spectrum-gutter-width: 48px;
+      --spectrum-margin-width: 48px; } } }
