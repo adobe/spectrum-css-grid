@@ -111,6 +111,5 @@ Development
 gulp.task('watch', gulp.series('build', function () {
   // watch for changes
   gulp.watch('docs/*.pug', gulp.series('pug:docs'));
-  gulp.watch('*.scss', gulp.series('styles:dist'));
-  gulp.watch('docs/sass/*.scss', gulp.series('styles:docs'));
+  gulp.watch('*/*.scss', gulp.series('pug:docs', 'styles:docs', 'styles:dist'));
 }));
