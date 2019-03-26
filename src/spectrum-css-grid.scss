@@ -1,52 +1,64 @@
-@import 'spectrum-origins/spectrum-global.scss';
-
-$spectrum-grid-gutter-xxsmall: 16px;
-$spectrum-grid-gutter-xsmall: 16px;
-$spectrum-grid-gutter-small: 24px; 
-$spectrum-grid-gutter-medium: 32px; 
-$spectrum-grid-gutter-large: 40px; 
-$spectrum-grid-gutter-xlarge: 48px; 
-
-.spectrum-grid {
-	display: grid;
-	grid-row-gap: 0;
-	grid-template-columns: repeat($spectrum-global-dimension-static-grid-columns, 1fr);
-	margin: 0 auto;
-	grid-auto-rows: minmax($spectrum-global-dimension-static-size-100, max-content);
-	align-content: start;
-
-	@media screen and (min-width: $spectrum-global-dimension-static-breakpoint-xsmall) {
-		grid-column-gap: $spectrum-grid-gutter-xsmall;
-		padding: 0 $spectrum-grid-gutter-xsmall;
-	}
-
-	@media screen and (min-width: $spectrum-global-dimension-static-breakpoint-small) {
-		grid-column-gap: $spectrum-grid-gutter-small;
-		padding: 0 $spectrum-grid-gutter-small;
-	}
-
-	@media screen and (min-width: $spectrum-global-dimension-static-breakpoint-medium) {
-		grid-column-gap: $spectrum-grid-gutter-medium;
-		padding: 0 $spectrum-grid-gutter-medium;
-	}
-
-	@media screen and (min-width: $spectrum-global-dimension-static-breakpoint-large) {
-		grid-column-gap: $spectrum-grid-gutter-large;
-		padding: 0 $spectrum-grid-gutter-large;
-	}
-
-	@media screen and (min-width: $spectrum-global-dimension-static-breakpoint-xlarge) {
-		grid-column-gap: $spectrum-grid-gutter-xlarge;
-		padding: 0 $spectrum-grid-gutter-xlarge;
-	}
-}
+@import 'spectrum-css-grid-vars.scss';
 
 .spectrum-grid--fixed {
-  @extend .spectrum-grid;
-  max-width: $spectrum-global-dimension-static-grid-fixed-max-width;
+  max-width: $fixed-grid-width;
+  padding: $gutter-xsmall;
 }
 
 .spectrum-grid--fluid {
-  @extend .spectrum-grid;
-  width: $spectrum-global-dimension-static-grid-fluid-width;
+  width: $fluid-grid-width;
+  padding: $gutter-xsmall;
+}
+
+@supports (grid-template-areas: ".") and (--foo: "bar")  {
+
+	:root {
+		--spectrum-baseline: #{$baseline};
+		--spectrum-column-count: #{$column-count};
+		--spectrum-gutter-width: #{$gutter-xsmall};
+		--spectrum-margin-width: #{$gutter-xsmall};
+	}
+
+	@media screen and (min-width: $breakpoint-xsmall) {
+		.spectrum-grid {
+			display: grid;
+			padding: 0 var(--spectrum-margin-width);
+			margin: 0 auto;
+			grid-row-gap: 0;
+			grid-template-columns: repeat(var(--spectrum-column-count), 1fr);
+			grid-auto-rows: minmax(var(--spectrum-baseline), max-content);
+			grid-column-gap: var(--spectrum-gutter-width);
+			align-content: start;
+		}
+	}
+
+	@media screen and (min-width: $breakpoint-small) {
+		:root {
+			--spectrum-gutter-width: #{$gutter-small};
+			--spectrum-margin-width: #{$gutter-small};
+		}
+		
+	}
+
+	@media screen and (min-width: $breakpoint-medium) {
+		.spectrum-grid--fluid {
+			--spectrum-gutter-width: #{$gutter-medium};
+			--spectrum-margin-width: #{$gutter-medium};
+		}
+	}
+
+	@media screen and (min-width: $breakpoint-large) {
+		.spectrum-grid--fluid {
+			--spectrum-gutter-width: #{$gutter-large};
+			--spectrum-margin-width: #{$gutter-large};
+		}
+	}
+
+	@media screen and (min-width: $breakpoint-xlarge) {
+		.spectrum-grid--fluid {
+			--spectrum-gutter-width: #{$gutter-xlarge};
+			--spectrum-margin-width: #{$gutter-xlarge};
+		}
+	}
+
 }
