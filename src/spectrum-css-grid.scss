@@ -41,21 +41,21 @@
 	}
 
 	@media screen and (min-width: $breakpoint-medium) {
-		:root {
+		.spectrum-grid--fluid {
 			--spectrum-gutter-width: #{$gutter-medium};
 			--spectrum-margin-width: #{$gutter-medium};
 		}
 	}
 
 	@media screen and (min-width: $breakpoint-large) {
-		:root {
+		.spectrum-grid--fluid {
 			--spectrum-gutter-width: #{$gutter-large};
 			--spectrum-margin-width: #{$gutter-large};
 		}
 	}
 
 	@media screen and (min-width: $breakpoint-xlarge) {
-		:root {
+		.spectrum-grid--fluid {
 			--spectrum-gutter-width: #{$gutter-xlarge};
 			--spectrum-margin-width: #{$gutter-xlarge};
 		}
