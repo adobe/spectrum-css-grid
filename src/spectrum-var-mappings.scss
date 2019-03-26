@@ -1,7 +1,5 @@
 @import 'spectrum-origins/spectrum-global.scss';
 
-$bg-color: green;
-
 // Breakpoints
 $breakpoint-xsmall: $spectrum-global-dimension-static-breakpoint-xsmall;
 $breakpoint-small: $spectrum-global-dimension-static-breakpoint-small;
@@ -20,7 +18,6 @@ $gutter-xlarge: 48px;
 // Column Count
 $column-count: $spectrum-global-dimension-static-grid-columns;
 
-// Grid Sizing
-$baseline: $spectrum-global-dimension-static-size-100;
+// Grid Width
 $fluid-grid-width: $spectrum-global-dimension-static-grid-fluid-width;
 $fixed-grid-width: $spectrum-global-dimension-static-grid-fixed-max-width;
