@@ -166,9 +166,11 @@
 			margin: 0 auto;
 			grid-row-gap: 0;
 			grid-template-columns: repeat(var(--spectrum-grid-column-count), 1fr);
+			grid-auto-rows: minmax(var(--spectrum-grid-baseline), -webkit-max-content);
 			grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
 			grid-column-gap: var(--spectrum-grid-gutter-width);
-			align-content: start;
+			-ms-flex-line-pack: start;
+			    align-content: start;
 		}
 	}
 
