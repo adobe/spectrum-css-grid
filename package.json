@@ -8,12 +8,8 @@
     "clean": "rimraf dist/",
     "build": "run-s clean build:*",
     "build:gulp": "gulp",
-    "build:node": "node --experimental-modules ./scripts/node-example.mjs",
-    "help": "convertDnaVars --help",
-    "build:cmd": "cowsay 'starting balthazar from command line...' && convertDnaVars -d ./dist/cmd/scss/ --type sass --prefix _",
     "bump": "dna-npm-bump-version",
-    "release": "npm run build && npm run bump",
-    "test": "echo 'nope' || exit 0"
+    "release": "npm run build && npm run bump"
   },
   "repository": {
     "type": "git",
@@ -27,9 +23,8 @@
   "author": "Grp-AD-Spectrum-Team <Grp-AD-Spectrum-Team@adobe.com>",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "@spectrum/balthazar": "^3.0.1",
+    "@adobe/spectrum-css": "^2.9.0",
     "@spectrum/dna-npm-release": "^2.1.0",
-    "@spectrum/spectrum-dna": "^5.9.0",
     "del": "^3.x",
     "fancy-log": "^1.3.2",
     "gulp": "^4.0.0",
@@ -44,5 +39,6 @@
     "pug": "^2.0.3",
     "rimraf": "^2.6.3",
     "run-sequence": "^2.x"
-  }
+  },
+  "dependencies": {}
 }
