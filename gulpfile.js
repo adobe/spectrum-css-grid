@@ -11,7 +11,8 @@ const plugins = [
   require('postcss-import'),
   require('postcss-media-variables'),
   require('postcss-custom-properties'),
-  require('postcss-media-variables')
+  require('postcss-media-variables'),
+  require('autoprefixer')
 ]
 
 // Clean up dist directory 
