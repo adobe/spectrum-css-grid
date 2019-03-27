@@ -1,0 +1,24 @@
+@import '../node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css';
+
+:root{
+    /* Breakpoints */
+    --breakpoint-small: var(--spectrum-global-dimension-static-breakpoint-xsmall);
+    --breakpoint-small: var(--spectrum-global-dimension-static-breakpoint-small);
+    --breakpoint-medium: var(--spectrum-global-dimension-static-breakpoint-medium);
+    --breakpoint-large: var(--spectrum-global-dimension-static-breakpoint-large);
+    --breakpoint-xlarge: var(--spectrum-global-dimension-static-breakpoint-xlarge);
+
+    /* Gutters */
+    --gutter-xxsmall: var(--spectrum-global-dimension-static-size-200); 
+    --gutter-xsmall: var(--spectrum-global-dimension-static-size-200); 
+    --gutter-small: var(--spectrum-global-dimension-static-size-300); 
+    --gutter-medium: var(--spectrum-global-dimension-static-size-400); 
+    --gutter-large: var(--spectrum-global-dimension-static-size-500); 
+    --gutter-xlarge: var(--spectrum-global-dimension-static-size-600); 
+
+    /* Grid Sizing */
+    --column-count: var(--spectrum-global-dimension-static-grid-columns);
+    --baseline: var(--spectrum-global-dimension-static-size-100);
+    --fluid-grid-width: var(--spectrum-global-dimension-static-grid-fluid-width);
+    --fixed-grid-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
+}
