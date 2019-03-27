@@ -4,6 +4,10 @@
   "description": "CSS Grid specs as defined in Spectrum DNA",
   "style": "dist/spectrum-css-grid.css",
   "main": "dist/spectrum-css-grid.css",
+  "browserslist": [
+    "last 2 major versions",
+    ">1%"
+  ],
   "scripts": {
     "clean": "rimraf dist/",
     "build": "run-s clean build:*",
@@ -25,6 +29,7 @@
   "devDependencies": {
     "@adobe/spectrum-css": "^2.9.0",
     "@spectrum/dna-npm-release": "^2.1.0",
+    "autoprefixer": "^9.5.0",
     "gulp": "^4.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.x",
