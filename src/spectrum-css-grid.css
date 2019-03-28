@@ -6,6 +6,7 @@
 
 .spectrum-grid--fixed {
   max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
+  margin: 0 auto;
 }
 
 @supports (grid-template-areas: ".") and (--foo: "bar")  {
@@ -15,6 +16,13 @@
 		--spectrum-grid-column-count: var(--spectrum-global-dimension-static-grid-columns);
 		--spectrum-grid-gutter-width: var(--spectrum-global-dimension-static-size-200);
 		--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-200);
+	}
+
+	.spectrum-grid--nested {
+		--columns: 1;
+		grid-column-end: span var(--columns);
+		grid-template-columns: repeat(var(--columns), 1fr);
+		grid-gap: inherit;
 	}
 
 	@media screen and (min-width: var(--spectrum-global-dimension-static-breakpoint-xsmall)) {
