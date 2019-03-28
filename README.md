@@ -41,6 +41,10 @@ CSS
 
 ```
 
+### A CSS Grid Primer
+
+The magic of CSS Grid is that once Spectrum sets up the underlying structure of the container, you are free to do whatever you want with standard CSS properties. To learn about how to work effectively with the grid, watch Rachel Andrew's quick video tutorial series: https://gridbyexample.com/video/
+
 ## Learn More
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
 
