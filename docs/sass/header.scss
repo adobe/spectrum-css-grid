@@ -1,0 +1,21 @@
+.header-logo {
+  display: flex;
+  margin-right: 16px;
+  width: auto;
+}
+
+.header-logo svg {
+  height: 32px;
+  width: auto;
+}
+
+.header-repoLink {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.header-title {
+  font-size: 55px;
+  text-align: center;
+  font-weight: 300;
+}

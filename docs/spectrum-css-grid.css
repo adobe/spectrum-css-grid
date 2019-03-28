@@ -138,17 +138,14 @@
   --spectrum-global-animation-ease-out: (0, 0, 0.40, 1);
   --spectrum-global-animation-linear: (0, 0, 1, 1);
 }
+.spectrum-grid {
+	width: 100%;
+	width: var(--spectrum-global-dimension-static-grid-fluid-width);
+}
 .spectrum-grid--fixed {
   max-width: 1280px;
   max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
-  padding: 16px;
-  padding: var(--spectrum-global-dimension-static-size-200);
-}
-.spectrum-grid--fluid {
-  width: 100%;
-  width: var(--spectrum-global-dimension-static-grid-fluid-width);
-  padding: 16px;
-  padding: var(--spectrum-global-dimension-static-size-200);
+  margin: 0 auto;
 }
 @supports (grid-template-areas: ".") and (--foo: "bar")  {
 
@@ -159,18 +156,21 @@
 		--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-200);
 	}
 
+	.spectrum-grid--nested {
+		--columns: 1;
+		grid-column-end: span var(--columns);
+		grid-template-columns: repeat(var(--columns), 1fr);
+		grid-gap: inherit;
+	}
+
 	@media screen and (min-width: 304px) {
 		.spectrum-grid {
 			display: grid;
-			padding: 0 var(--spectrum-grid-outer-padding);
-			margin: 0 auto;
 			grid-row-gap: 0;
 			grid-template-columns: repeat(var(--spectrum-grid-column-count), 1fr);
 			grid-auto-rows: minmax(var(--spectrum-grid-baseline), -webkit-max-content);
 			grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
 			grid-column-gap: var(--spectrum-grid-gutter-width);
-			-ms-flex-line-pack: start;
-			    align-content: start;
 		}
 	}
 
@@ -179,7 +179,6 @@
 			--spectrum-grid-gutter-width: var(--spectrum-global-dimension-static-size-300);
 			--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-300);
 		}
-		
 	}
 
 	@media screen and (min-width: 1280px) {
@@ -202,5 +201,4 @@
 			--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-600);
 		}
 	}
-
 }
