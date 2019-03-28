@@ -1,202 +1,246 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Spectrum CSS-Grid</title>
-  <link rel="stylesheet" href="spectrum-css-grid.css"/>
-  <link rel="stylesheet" href="demo.css"/>
-</head>
-<body> 
-  <div class="spectrum-grid spectrum-grid--fixed">
-    <div class="header"> 
-      <div class="header-logo">
-         <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="logosvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 27" style="enable-background:new 0 0 32 27;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#757575;}
-	.st1{fill:#999999;}
-	.st2{fill:#C7C7C7;}
-</style>
-<path class="st0" d="M32,17.1L16,27L0,17.1l4.9-3L16,20.9L27.1,14L32,17.1z"/>
-<path class="st1" d="M22.9,7.8L16,12.1L9.1,7.8l-4.2,2.6L16,17.3L27,10.4L22.9,7.8z"/>
-<path class="st2" d="M16,0L9.1,4.3L16,8.5l6.9-4.3L16,0z"/>
-</svg>
+<html lang="en">
 
-      </div>
-      <div class="header-repoLink"><a href="https://git.corp.adobe.com/Spectrum/spectrum-css-grid/" target="_blank">Spectrum-CSS-Grid Repository</a></div>
-    </div><br/>
-    <h1 class="main-title">Spectrum CSS-Grid Demo</h1>
-    <h2>Fixed</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spectrum CSS-Grid</title>
+  <link rel="stylesheet" href="spectrum-css-grid.css" />
+  <link rel="stylesheet" href="demo.css" />
+</head>
+
+<body class="application-frame">
+  <div class="header">
+    <div class="header-logo">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="logosvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 32 27" style="enable-background:new 0 0 32 27;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #757575;
+          }
+
+          .st1 {
+            fill: #999999;
+          }
+
+          .st2 {
+            fill: #C7C7C7;
+          }
+        </style>
+        <path class="st0" d="M32,17.1L16,27L0,17.1l4.9-3L16,20.9L27.1,14L32,17.1z" />
+        <path class="st1" d="M22.9,7.8L16,12.1L9.1,7.8l-4.2,2.6L16,17.3L27,10.4L22.9,7.8z" />
+        <path class="st2" d="M16,0L9.1,4.3L16,8.5l6.9-4.3L16,0z" />
+      </svg>
+      <a class="header-repoLink" href="https://git.corp.adobe.com/betts/spectrum-css-grid/"
+        target="_blank">Spectrum-CSS-Grid Repository</a>
+    </div>
+    <h1 class="header-title">Spectrum CSS-Grid Demo</h1>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="spectrum-grid spectrum-grid--fixed toc">
+    <h1 class="example-header">Table of contents</h1>
+    <a class="toc-item" href="#fixed-grid">Fixed Grid</a>
+    <a class="toc-item" href="#fluid-grid">Fluid Grid</a>
+    <a class="toc-item" href="#nested-grids">Nested Grids</a>
+    <a class="toc-item" href="#offsets">Offsets</a>
+    <a class="toc-item" href="#alignment">Alignment</a>
+    <a class="toc-item" href="#distribution">Distribution</a>
+    <a class="toc-item" href="#layout">Layout</a>
+  </div>
+
+  <!-- Fixed Grid -->
+  <a name="fixed-grid"></a>
+  <div class="spectrum-grid spectrum-grid--fixed example">
+    <h1 class="example-header">Fixed</h1>
     <p>Fixed responsive grid.</p>
-    <div class="box-row" style="grid-column: 1/2;"></div>
-    <div class="box-row" style="grid-column: 2/3;"></div>
-    <div class="box-row" style="grid-column: 3/4;"></div>
-    <div class="box-row" style="grid-column: 4/5;"></div>
-    <div class="box-row" style="grid-column: 5/6;"></div>
-    <div class="box-row" style="grid-column: 6/7;"></div>
-    <div class="box-row" style="grid-column: 7/8;"></div>
-    <div class="box-row" style="grid-column: 8/9;"></div>
-    <div class="box-row" style="grid-column: 9/10;"></div>
-    <div class="box-row" style="grid-column: 10/11;"></div>
-    <div class="box-row" style="grid-column: 11/12;"></div>
-    <div class="box-row" style="grid-column: 12/13;"></div>
-    <div class="box-row" style="grid-column: 1/4;"></div>
-    <div class="box-row" style="grid-column: 4/6;"></div>
-    <div class="box-row" style="grid-column: 6/13;"></div>
+    <div class="box" style="grid-column: 1/2;"></div>
+    <div class="box" style="grid-column: 2/3;"></div>
+    <div class="box" style="grid-column: 3/4;"></div>
+    <div class="box" style="grid-column: 4/5;"></div>
+    <div class="box" style="grid-column: 5/6;"></div>
+    <div class="box" style="grid-column: 6/7;"></div>
+    <div class="box" style="grid-column: 7/8;"></div>
+    <div class="box" style="grid-column: 8/9;"></div>
+    <div class="box" style="grid-column: 9/10;"></div>
+    <div class="box" style="grid-column: 10/11;"></div>
+    <div class="box" style="grid-column: 11/12;"></div>
+    <div class="box" style="grid-column: 12/13;"></div>
+    <div class="box" style="grid-column: 1/4;"></div>
+    <div class="box" style="grid-column: 4/6;"></div>
+    <div class="box" style="grid-column: 6/13;"></div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 1/4;}
 #element2 {grid-column: 4/6;}
 #element3 {grid-column: 6/13;}</code></pre>
   </div>
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Fluid</h2>
+
+  <!-- Fluid Grid -->
+  <a name="fluid-grid"></a>
+  <div class="spectrum-grid spectrum-grid--fluid example">
+    <h1 class="example-header">Fluid</h1>
     <p>Percent based widths allow fluid resizing of columns and rows.</p>
-    <div class="box-row" style="grid-column: 1/2;"></div>
-    <div class="box-row" style="grid-column: 2/3;"></div>
-    <div class="box-row" style="grid-column: 3/4;"></div>
-    <div class="box-row" style="grid-column: 4/5;"></div>
-    <div class="box-row" style="grid-column: 5/6;"></div>
-    <div class="box-row" style="grid-column: 6/7;"></div>
-    <div class="box-row" style="grid-column: 7/8;"></div>
-    <div class="box-row" style="grid-column: 8/9;"></div>
-    <div class="box-row" style="grid-column: 9/10;"></div>
-    <div class="box-row" style="grid-column: 10/11;"></div>
-    <div class="box-row" style="grid-column: 11/12;"></div>
-    <div class="box-row" style="grid-column: 12/13;"></div>
-    <div class="box-row" style="grid-column: 1/4;"></div>
-    <div class="box-row" style="grid-column: 4/6;"></div>
-    <div class="box-row" style="grid-column: 6/13;"></div>
+    <div class="box" style="grid-column: 1/2;"></div>
+    <div class="box" style="grid-column: 2/3;"></div>
+    <div class="box" style="grid-column: 3/4;"></div>
+    <div class="box" style="grid-column: 4/5;"></div>
+    <div class="box" style="grid-column: 5/6;"></div>
+    <div class="box" style="grid-column: 6/7;"></div>
+    <div class="box" style="grid-column: 7/8;"></div>
+    <div class="box" style="grid-column: 8/9;"></div>
+    <div class="box" style="grid-column: 9/10;"></div>
+    <div class="box" style="grid-column: 10/11;"></div>
+    <div class="box" style="grid-column: 11/12;"></div>
+    <div class="box" style="grid-column: 12/13;"></div>
+    <div class="box" style="grid-column: 1/4;"></div>
+    <div class="box" style="grid-column: 4/6;"></div>
+    <div class="box" style="grid-column: 6/13;"></div>
   </div>
-  <!-- Offsets-->
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Offsets</h2>
-    <p>Offsetting placement of layout region. Simply define the `grid-column-start` property with the column you want the layout region to begin.</p>
-    <div class="box-row" style="grid-column: 12/13;"></div>
-    <div class="box-row" style="grid-column: 11/13;"></div>
-    <div class="box-row" style="grid-column: 10/13;"></div>
-    <div class="box-row" style="grid-column: 9/13;"></div>
-    <div class="box-row" style="grid-column: 8/13;"></div>
-    <div class="box-row" style="grid-column: 7/13;"></div>
-    <div class="box-row" style="grid-column: 6/13;"></div>
-    <div class="box-row" style="grid-column: 5/13;"></div>
-    <div class="box-row" style="grid-column: 4/13;"></div>
-    <div class="box-row" style="grid-column: 3/13;"></div>
-    <div class="box-row" style="grid-column: 2/13;"></div>
-    <div class="box-row" style="grid-column: 1/13;"></div>
+
+  <!-- Nested Grids-->
+  <a name="nested-grids"></a>
+  <div class="spectrum-grid spectrum-grid--fluid example">
+    <h1 class="example-header">Nested Grids</h1>
+    <p>Nested grids should be avoided for the most part. Spectrum's grid is intended for layout regions only.</p>
+    <p>That said, sometimes rules need to be broken. There may be situations where it makes sense to take the grid one
+      level deeper. Here's how you would do it.</p>
+    <p>First: <strong>do not</strong> use the <code>spectrum-grid</code> classes to accomplish that. This will create
+      another 12-column grid inside your existing 12-column grid – which will look wierd.</p>
+    <p>What you really want is a grid that lines up on top of the master grid.</p>
+    <p>To do that, just apply `spectrum-grid--nested` to any child of the master grid. And then, give it a custom class where you define a `--columns` custom property and a start point on the master grid.</p>
+    <div class="box2 grid1 spectrum-grid--nested">
+      <div class="box" style="grid-column: 1/4"></div>
+      <div class="box" style="grid-column: 4/10"></div>
+      <div class="box" style="grid-column: 10/13"></div>
+    </div>
+    <div class="box2 grid2 spectrum-grid--nested">
+      <div class="box" style="grid-column: 1/7"></div>
+      <div class="box" style="grid-column: 7/13"></div>
+    </div>
+    <pre class="prettyprint"><code class="lang-html">.nested-grid1 {
+  --columns: 9; 
+  grid-column-start: 1; 
+}
+
+.nested-grid2 {
+  --columns: 9; 
+  grid-column-start: 1; 
+}
+      
+&lt;main class=&quot;spectrum-grid&quot;&gt;
+  &lt;div class=&quot;spectrum-grid--nested nested-grid1&quot;&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-grid--nested nested-grid2&quot;&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+  </div>
+
+  <!-- Offsets -->
+  <a name="offsets"></a>
+  <div class="spectrum-grid spectrum-grid--fluid example">
+    <h1 class="example-header">Offsets</h1>
+    <p>Offsetting placement of layout region. Simply define the `grid-column-start` property with the column you want
+      the layout region to begin.</p>
+    <div class="box" style="grid-column: 12/13;"></div>
+    <div class="box" style="grid-column: 11/13;"></div>
+    <div class="box" style="grid-column: 10/13;"></div>
+    <div class="box" style="grid-column: 9/13;"></div>
+    <div class="box" style="grid-column: 8/13;"></div>
+    <div class="box" style="grid-column: 7/13;"></div>
+    <div class="box" style="grid-column: 6/13;"></div>
+    <div class="box" style="grid-column: 5/13;"></div>
+    <div class="box" style="grid-column: 4/13;"></div>
+    <div class="box" style="grid-column: 3/13;"></div>
+    <div class="box" style="grid-column: 2/13;"></div>
+    <div class="box" style="grid-column: 1/13;"></div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 10/13;}</code></pre>
   </div>
-  <!-- Nested Grids-->
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Nested Grids</h2>
-    <p>Nest grids inside grids inside grids.</p>
-    <div class="box-row" style="grid-column: 1/7;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/4"></div>
-        <div class="box-nested" style="grid-column: 4/10"></div>
-        <div class="box-nested" style="grid-column: 10/13"></div>
-      </div>
-    </div>
-    <div class="box-row" style="grid-column: 7/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/7"></div>
-        <div class="box-nested" style="grid-column: 7/13"></div>
-      </div>
-    </div>
-    <pre class="prettyprint"><code class="lang-html">&lt;main class=&quot;spectrum-grid spectrum-grid--fluid&quot;&gt;
-  &lt;div id=&quot;container1&quot;&gt;
-    &lt;div class=&quot;spectrum-grid spectrum-grid--fluid&quot;&gt;
-      &lt;div id=&quot;element1&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;container2&quot;&gt;
-    &lt;div class=&quot;spectrum-grid spectrum-grid--fluid&quot;&gt;
-      &lt;div id=&quot;element2&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-  </div>
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Alignment</h2>
+
+  <!-- Alignment -->
+  <a name="alignment"></a>
+  <div class="example">
+    <h1 class="example-header">Alignment</h1>
     <p>Align elements to the start or end of a row as well as the top, bottom, or center of a column.</p>
-    <p>Row alignments are done by specifying `grid-column-start` and `grid-column-end` properties. Column alignment is specified by the `grid-row` property.</p>
-    <h3>Start of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/7;"></div>
-      </div>
+    <p>Row alignments are done by specifying `grid-column-start` and `grid-column-end` properties. Column alignment is
+      specified by the `grid-row` property.</p>
+
+    <h3 class="example-subheader">Start of row</h3>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 1/7;"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 1/7;}
 </code></pre>
-    <h3>Center of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 4/10;"></div>
-      </div>
+
+    <h3 class="example-subheader">Center of row</h3>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 4/10;"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 1/7;}
 </code></pre>
-    <h3>End of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 7/13;"></div>
-      </div>
+
+    <h3 class="example-subheader">End of row</h3>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 7/13;"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-column: 1/7;}
 </code></pre>
-    <!-- Vertical alignment -->
-    <h3>Top of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/7; grid-row: 1/10"></div>
-        <div class="box-nested" style="grid-column: 7/13; grid-row: 1/2"></div>
-      </div>
+
+    <h3 class="example-subheader">Top of row</h3>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 1/7; grid-row: 1/10"></div>
+      <div class="box" style="grid-column: 7/13; grid-row: 1/2"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-row: 1/2;}
 </code></pre>
+
     <h3>Middle of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/7; grid-row: 1/10"></div>
-        <div class="box-nested" style="grid-column: 7/13; grid-row: 4/6"></div>
-      </div>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 1/7; grid-row: 1/10"></div>
+      <div class="box" style="grid-column: 7/13; grid-row: 4/6"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-row: 4/6;}
 </code></pre>
+
     <h3>End of row</h3>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/7; grid-row: 1/10"></div>
-        <div class="box-nested" style="grid-column: 7/13; grid-row: 6/10"></div>
-      </div>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 1/7; grid-row: 1/10"></div>
+      <div class="box" style="grid-column: 7/13; grid-row: 6/10"></div>
     </div>
     <pre class="prettyprint"><code class="lang-css">#element1 {grid-row: 6/10;}
 </code></pre>
   </div>
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Distribution</h2>
+
+  <!-- Distribution -->
+  <a name="distribution"></a>
+  <div class="example">
+    <h1 class="example-header">Distribution</h1>
     <p>Distributing layout regions is also done by defining `grid-column` start and end properties.</p>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 1/4;"></div>
-        <div class="box-nested" style="grid-column: 6/8;"></div>
-        <div class="box-nested" style="grid-column: 10/13;"></div>
-      </div>
-    </div>
-    <div class="box-row" style="grid-column: 1/13;">
-      <div class="spectrum-grid spectrum-grid--fluid">
-        <div class="box-nested" style="grid-column: 2/5;"></div>
-        <div class="box-nested" style="grid-column: 6/8;"></div>
-        <div class="box-nested" style="grid-column: 9/12;"></div>
-      </div>
+    <div class="spectrum-grid spectrum-grid--fluid">
+      <div class="box" style="grid-column: 1/4;"></div>
+      <div class="box" style="grid-column: 6/8;"></div>
+      <div class="box" style="grid-column: 10/13;"></div>
+      <div class="box" style="grid-column: 2/5;"></div>
+      <div class="box" style="grid-column: 6/8;"></div>
+      <div class="box" style="grid-column: 9/12;"></div>
     </div>
   </div>
-  <div class="spectrum-grid spectrum-grid--fluid">
-    <h2>Layouts in CSS</h2>
+  </div>
+
+  <!-- Layout -->
+  <a name="layout"></a>
+  <div class="spectrum-grid spectrum-grid--fluid example">
+    <h1 class="example-header">Layouts in CSS</h1>
     <p>All you need to remember is grid container and layout regions defined in your CSS.</p>
     <pre class="prettyprint"><code class="lang-html">&lt;div class=&quot;spectrum-grid spectrum-grid--fluid&quot;&gt;
   &lt;div id=&quot;element1&quot;&gt; Layout Region &lt;/div&gt;
 &lt;/div&gt;</code><br/><br/><code class="lang-css">#element1 {grid-columns: 1/6;}</code></pre>
   </div>
 </body>
+
+</html>
