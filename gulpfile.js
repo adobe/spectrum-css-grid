@@ -62,6 +62,6 @@ Development
 
 gulp.task('watch', gulp.series('build', function () {
   // watch for changes
-  gulp.watch('docs/*.*');
+  gulp.watch(['docs/sass/*.scss','docs/*.html'], gulp.series('styles:docs'));
   gulp.watch('src/*.css', gulp.series('styles:dist', 'styles:docs'));
 }));
