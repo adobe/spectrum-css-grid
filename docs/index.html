@@ -109,14 +109,14 @@
       another 12-column grid inside your existing 12-column grid – which will look wierd.</p>
     <p>What you really want is a grid that lines up on top of the master grid.</p>
     <p>To do that, just apply `spectrum-grid--nested` to any child of the master grid. And then, give it a custom class where you define a `--columns` custom property and a start point on the master grid.</p>
-    <div class="box2 grid1 spectrum-grid--nested">
+    <div class="box2 spectrum-grid--nested grid1">
       <div class="box" style="grid-column: 1/4"></div>
-      <div class="box" style="grid-column: 4/10"></div>
-      <div class="box" style="grid-column: 10/13"></div>
+      <div class="box" style="grid-column: 4/5"></div>
+      <div class="box" style="grid-column: 5/9"></div>
     </div>
-    <div class="box2 grid2 spectrum-grid--nested">
-      <div class="box" style="grid-column: 1/7"></div>
-      <div class="box" style="grid-column: 7/13"></div>
+    <div class="box2 spectrum-grid--nested grid2">
+      <div class="box" style="grid-column: 1/2"></div>
+      <div class="box" style="grid-column: 2/4"></div>
     </div>
     <pre class="prettyprint"><code class="lang-html">.nested-grid1 {
   --columns: 9; 

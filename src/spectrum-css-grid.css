@@ -20,6 +20,7 @@
 
 	.spectrum-grid--nested {
 		--columns: 1;
+		display: grid;
 		grid-column-end: span var(--columns);
 		grid-template-columns: repeat(var(--columns), 1fr);
 		grid-gap: inherit;
