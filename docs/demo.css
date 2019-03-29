@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box; }
 
-body {
+html,body {
   font-family: "Adobe Clean", Helvetica, Arial, sans-serif;
   color: #444;
   margin: 0;
