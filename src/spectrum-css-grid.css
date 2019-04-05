@@ -23,7 +23,9 @@
 		display: grid;
 		grid-column-end: span var(--columns);
 		grid-template-columns: repeat(var(--columns), 1fr);
-		grid-gap: inherit;
+		grid-column-gap: inherit;
+		grid-row-gap: inherit;
+		grid-auto-rows: inherit;
 	}
 
 	@media screen and (min-width: var(--spectrum-global-dimension-static-breakpoint-xsmall)) {
