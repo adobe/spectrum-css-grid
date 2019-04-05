@@ -18,6 +18,12 @@ Clear examples of do's and do not's can be found in the official Spectrum docume
 
 ## Usage
 
+[Can I Use css-grid?](http://caniuse.com/#feat=css-grid) Data on support for the css-grid feature across the major browsers from caniuse.com.
+
+![Data on support for the css-grid feature across the major browsers from caniuse.com](https://res.cloudinary.com/ireaderinokun/image/upload/v1554434874/caniuse-embed/css-grid-2019-4-5.png)
+
+*CanIUse screenshot last updated April 4, 2019*
+
 ### Getting started
 Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid properties for your layout regions or page layouts.
 
