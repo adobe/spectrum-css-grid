@@ -1,12 +1,13 @@
 @import '../node_modules/@adobe/spectrum-css/dist/vars/spectrum-global.css';
 
 .spectrum-grid {
+	padding: var(--spectrum-global-dimension-static-size-200);
 	width: var(--spectrum-global-dimension-static-grid-fluid-width);
 }
 
 .spectrum-grid--fixed {
-  max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
-  margin: 0 auto;
+  	max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
+  	margin: 0 auto;
 }
 
 @supports (grid-template-areas: ".") and (--foo: "bar")  {
@@ -16,6 +17,10 @@
 		--spectrum-grid-column-count: var(--spectrum-global-dimension-static-grid-columns);
 		--spectrum-grid-gutter-width: var(--spectrum-global-dimension-static-size-200);
 		--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-200);
+	}
+
+	.spectrum-grid {
+		padding: var(--spectrum-grid-outer-padding);
 	}
 
 	.spectrum-grid--nested {

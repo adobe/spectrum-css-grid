@@ -1,4 +1,5 @@
 .header-logo {
+  grid-column: 1/13;
   display: flex;
   margin-right: 16px;
   width: auto; }
@@ -12,6 +13,7 @@
   padding-left: 8px; }
 
 .header-title {
+  grid-column: 1/13;
   font-size: 55px;
   text-align: center;
   font-weight: 300; }
