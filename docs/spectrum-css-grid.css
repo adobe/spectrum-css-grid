@@ -163,7 +163,7 @@
 	}
 
 	.spectrum-grid--nested {
-		--columns: 1;
+		--columns: 12;
 		display: grid;
 		grid-column-end: span var(--columns);
 		grid-template-columns: repeat(var(--columns), minmax(0,1fr));
