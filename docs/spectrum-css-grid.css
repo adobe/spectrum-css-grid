@@ -149,6 +149,10 @@
   	max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
   	margin: 0 auto;
 }
+.spectrum-grid--fixedWide {
+	max-width: 1600px;
+	margin: 0 auto;
+}
 @supports (grid-template-areas: ".") and (--foo: "bar")  {
 
 	:root {
