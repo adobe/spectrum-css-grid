@@ -1,14 +1,19 @@
 ![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
 # spectrum-css-grid
 
-CSS-Grid property specs for the [Spectrum][spectrum-link] Design Language.
+A CSS-Grid implementation of the [Spectrum][spectrum-link] Design Language's grid system.
 
-## Support
-This grid officially supports all browsers that implement CSS Grid Level 1. For a list of the known CSS Grid bugs that we have addressed, see [this issue](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/5).
+## Goals
 
-We decided against [IE 11 support](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/7) for the time being.
+Provide a CSS Grid 1 implementation of Spectrum's responsive grid targetting evergreen browsers, for use both in applications and web sites.
 
-## The Grid's Role in Layout
+## Installation
+
+Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid properties for your layout regions or page layouts.
+
+## Usage
+
+### The Grid's Role in Layout
 
 In the world of the Spectrum design language, regardless of whether you are making an informational website or a rich application experience, the grid is solely for laying out the regions of the content. That is what this grid implementation is intended to help with.
 
@@ -16,7 +21,11 @@ It is not meant to be used for the chrome/frame of the experience. For example, 
 
 Clear examples of do's and do not's can be found in the official Spectrum documentation. Please **do not** use the grid for the [application frame](https://spectrum.corp.adobe.com/application-frame.html). Please **do** us it for [things within the frame](https://spectrum.corp.adobe.com/grid.html#offsetting-the-grid).
 
-## Usage
+### Browser Support
+
+This grid officially supports all browsers that implement CSS Grid Level 1. For a list of the known CSS Grid bugs that we have addressed, see [this issue](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/5).
+
+We have decided against [IE 11 support](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/7) for the time being.
 
 [Can I Use css-grid?](http://caniuse.com/#feat=css-grid) Data on support for the css-grid feature across the major browsers from caniuse.com.
 
@@ -25,13 +34,13 @@ Clear examples of do's and do not's can be found in the official Spectrum docume
 *CanIUse screenshot last updated April 4, 2019*
 
 ### Getting started
-Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid properties for your layout regions or page layouts.
 
 Layout regions need to exist as immediate children to the container (`spectrum-grid--fluid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
 
 Check out the [demo page](https://git.corp.adobe.com/pages/betts/spectrum-css-grid/) with examples of the grid system.
 
 ### Example
+
 HTML
 ```
 <main class="spectrum-grid--fluid">
@@ -58,3 +67,11 @@ Thanks - Adobe Design Frameworks
 
 [spectrum-link]: http://spectrum.corp.adobe.com
 [topdoc-link]: https://github.com/Topdoc/topdoc/wiki
+
+## Contributing
+
+Contributions are welcomed! Read the Contributing Guide for more information.
+
+## Licensing
+
+This project is licensed under the Apache V2 License. See LICENSE for more information.
