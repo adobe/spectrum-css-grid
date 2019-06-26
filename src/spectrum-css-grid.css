@@ -10,6 +10,11 @@
   	margin: 0 auto;
 }
 
+.spectrum-grid--fixedWide {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
 @supports (grid-template-areas: ".") and (--foo: "bar")  {
 
 	:root {
@@ -21,6 +26,11 @@
 
 	.spectrum-grid {
 		padding: var(--spectrum-grid-outer-padding);
+		display: grid;
+			grid-row-gap: 0;
+			grid-template-columns: repeat(var(--spectrum-grid-column-count), minmax(0,1fr));
+			grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
+			grid-column-gap: var(--spectrum-grid-gutter-width);
 	}
 
 	.spectrum-grid--nested {
@@ -31,16 +41,6 @@
 		grid-column-gap: inherit;
 		grid-row-gap: inherit;
 		grid-auto-rows: inherit;
-	}
-
-	@media screen and (min-width: var(--spectrum-global-dimension-static-breakpoint-xsmall)) {
-		.spectrum-grid {
-			display: grid;
-			grid-row-gap: 0;
-			grid-template-columns: repeat(var(--spectrum-grid-column-count), minmax(0,1fr));
-			grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
-			grid-column-gap: var(--spectrum-grid-gutter-width);
-		}
 	}
 
 	@media screen and (min-width: var(--spectrum-global-dimension-static-breakpoint-small)) {
