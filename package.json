@@ -27,7 +27,7 @@
   "author": "Grp-AD-Spectrum-Team <Grp-AD-Spectrum-Team@adobe.com>",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "@adobe/spectrum-css": "^2.9.0",
+    "@adobe/spectrum-css": "^2.13.0",
     "@spectrum/dna-npm-release": "^2.1.0",
     "autoprefixer": "^9.5.0",
     "gulp": "^4.0.0",
@@ -36,7 +36,6 @@
     "postcss-custom-properties": "^8.0.9",
     "postcss-import": "^12.0.1",
     "postcss-media-variables": "^2.0.1",
-    "pug": "^2.0.3",
     "rimraf": "^2.6.3",
     "run-sequence": "^2.x"
   },

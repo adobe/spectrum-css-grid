@@ -18,8 +18,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-grid--fixed {
-  	max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
-  	margin: 0 auto;
+	max-width: var(--spectrum-global-dimension-static-grid-fixed-max-width);
+	margin: 0 auto;
 }
 
 .spectrum-grid--fixedWide {
@@ -27,11 +27,10 @@ governing permissions and limitations under the License.
 	margin: 0 auto;
 }
 
-@supports (grid-template-areas: ".") and (--foo: "bar")  {
+@supports (grid-template-areas: ".") and (--foo: "bar") {
 
 	:root {
 		--spectrum-grid-baseline: var(--spectrum-global-dimension-static-size-100);
-		--spectrum-grid-column-count: var(--spectrum-global-dimension-static-grid-columns);
 		--spectrum-grid-gutter-width: var(--spectrum-global-dimension-static-size-200);
 		--spectrum-grid-outer-padding: var(--spectrum-global-dimension-static-size-200);
 	}
@@ -39,17 +38,17 @@ governing permissions and limitations under the License.
 	.spectrum-grid {
 		padding: var(--spectrum-grid-outer-padding);
 		display: grid;
-			grid-row-gap: 0;
-			grid-template-columns: repeat(var(--spectrum-grid-column-count), minmax(0,1fr));
-			grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
-			grid-column-gap: var(--spectrum-grid-gutter-width);
+		grid-row-gap: 0;
+		grid-template-columns: repeat(var(--spectrum-global-dimension-static-grid-columns), minmax(0, 1fr));
+		grid-auto-rows: minmax(var(--spectrum-grid-baseline), max-content);
+		grid-column-gap: var(--spectrum-grid-gutter-width);
 	}
 
 	.spectrum-grid--nested {
 		--columns: 12;
 		display: grid;
 		grid-column-end: span var(--columns);
-		grid-template-columns: repeat(var(--columns), minmax(0,1fr));
+		grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 		grid-column-gap: inherit;
 		grid-row-gap: inherit;
 		grid-auto-rows: inherit;
