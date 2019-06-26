@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp    = require('gulp');
+const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const sass    = require('gulp-sass');
-const rimraf  = require('rimraf');
+const sass = require('gulp-sass');
+const rimraf = require('rimraf');
 
 /*******************************************************
 Build Dist 
-********************************************************/ 
+********************************************************/
 
 const plugins = [
   require('postcss-import'),
@@ -29,7 +29,7 @@ const plugins = [
 
 // Clean up dist directory 
 gulp.task('clean', gulp.series(function (cb) {
-   rimraf('./dist/', cb);
+  rimraf('./dist/', cb);
 }));
 
 // Get one .styl file and render
@@ -41,10 +41,10 @@ gulp.task('styles:dist', gulp.series('clean', function () {
 
 /*******************************************************
 Build Docs 
-********************************************************/ 
+********************************************************/
 
 // Package styles
-gulp.task('styles:copy', gulp.series('styles:dist', function (){
+gulp.task('styles:copy', gulp.series('styles:dist', function () {
   return gulp.src('./dist/spectrum-css-grid.css')
     .pipe(gulp.dest('./docs/'));
 }));
@@ -63,17 +63,17 @@ gulp.task('styles:docs', gulp.series('styles:copy', function () {
 
 /*******************************************************
 Publishing 
-********************************************************/ 
+********************************************************/
 
 gulp.task('build', gulp.series('styles:docs', 'styles:dist'));
 gulp.task('default', gulp.series('build'));
 
 /*******************************************************
 Development 
-********************************************************/ 
+********************************************************/
 
 gulp.task('watch', gulp.series('build', function () {
   // watch for changes
-  gulp.watch(['docs/sass/*.scss','docs/*.html'], gulp.series('styles:docs'));
+  gulp.watch(['docs/sass/*.scss', 'docs/*.html'], gulp.series('styles:docs'));
   gulp.watch('src/*.css', gulp.series('styles:dist', 'styles:docs'));
 }));
