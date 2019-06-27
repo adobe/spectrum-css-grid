@@ -117,15 +117,9 @@
     <div class="example-intro">
       <h1 class="spectrum-Heading2">Nested Grids</h1>
       <div class="spectrum-Rule spectrum-Rule--large"></div>
-      <p>Nested grids should be avoided for the most part. Spectrum's grid is intended for layout regions only.</p>
-      <p>That said, sometimes rules need to be broken. There may be situations where it makes sense to take the grid one
-        level deeper. Here's how you would do it.</p>
-      <p>First: <strong>do not</strong> use the <code>spectrum-grid</code> classes to accomplish that. This will create
-        another 12-column grid inside your existing 12-column grid – which will look wierd.</p>
-      <p>What you really want is a grid that lines up on top of the master grid.</p>
-      <p>To do that, just apply `spectrum-grid--nested` to any child of the master grid. And then, give it a custom
-        class
-        where you define a `--columns` custom property and a start point on the master grid.</p>
+      <p>You can nest as many layers deep as you'd like. The only requirement of a nested grid is that it's immediate parent is also a grid.</p>
+      <p>All you need to do is define a `--columns` custom property and a `grid-column-start` on the nested grid.</p>
+      <p>If you don't define either, the nested grid will default to 12 columns at the full width.</p>
     </div>
     <div class="box2 spectrum-grid spectrum-grid--nested grid1">
       <div class="box" style="grid-column: 1/4; grid-row: 1;"></div>
