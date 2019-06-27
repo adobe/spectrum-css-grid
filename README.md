@@ -9,7 +9,7 @@ Provide a CSS Grid 1 implementation of Spectrum's responsive grid targetting eve
 
 ## Installation
 
-Download and link `dist/spectrum-css-grid.css` in your project. Use CSS Grid properties for your layout regions or page layouts.
+Download and link `dist/spectrum-css-grid.css` in your project, along with the Custom Properties flavour of Spectrum CSS (https://github.com/adobe/spectrum-css#css-custom-properties-strategy).
 
 ## Usage
 
@@ -35,7 +35,7 @@ We have decided against [IE 11 support](https://git.corp.adobe.com/betts/spectru
 
 ### Getting started
 
-Layout regions need to exist as immediate children to the container (`spectrum-grid--fluid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
+Layout regions need to exist as immediate children to the container (`spectrum-grid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
 
 Check out the [demo page](https://git.corp.adobe.com/pages/betts/spectrum-css-grid/) with examples of the grid system.
 
@@ -43,7 +43,7 @@ Check out the [demo page](https://git.corp.adobe.com/pages/betts/spectrum-css-gr
 
 HTML
 ```
-<main class="spectrum-grid--fluid">
+<main class="spectrum-grid">
   <div id="example1"></div>
   <div id="example2"></div>
 </main>
@@ -61,6 +61,7 @@ CSS
 The magic of CSS Grid is that once Spectrum sets up the underlying structure of the container, you are free to do whatever you want with standard CSS properties. To learn about how to work effectively with the grid, watch Rachel Andrew's quick video tutorial series: https://gridbyexample.com/video/
 
 ## Learn More
+
 For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
 
 Thanks - Adobe Design Frameworks
