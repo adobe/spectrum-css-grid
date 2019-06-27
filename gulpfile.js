@@ -21,6 +21,7 @@ Build Dist
 
 const plugins = [
   require('postcss-media-variables'),
+  require('postcss-media-variables'),
   require('autoprefixer')
 ]
 
