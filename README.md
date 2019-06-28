@@ -1,5 +1,3 @@
-![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
-
 # spectrum-css-grid
 
 A CSS-Grid implementation of the [Spectrum][spectrum-link] Design Language's grid system.
@@ -30,7 +28,7 @@ This grid officially supports all browsers that implement CSS Grid Level 1 and C
 
 Layout regions need to exist as immediate children to the container (`spectrum-grid` or `spectrum-grid--fixed`). Define each layout region's column span using the `grid-column` property in your stylesheet.
 
-Check out the [demo page](https://git.corp.adobe.com/pages/betts/spectrum-css-grid/) with examples of the grid system.
+Check out the [demo page](http://opensource.adobe.com/spectrum-css-grid/) with examples of the grid system.
 
 ### Example
 
