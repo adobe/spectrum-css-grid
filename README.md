@@ -1,6 +1,6 @@
 # spectrum-css-grid
 
-A CSS-Grid implementation of the [Spectrum][spectrum-link] Design Language's grid system.
+A CSS-Grid implementation of the Spectrum Design Language's grid system.
 
 ## Goals
 
