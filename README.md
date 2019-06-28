@@ -1,4 +1,5 @@
 ![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
+
 # spectrum-css-grid
 
 A CSS-Grid implementation of the [Spectrum][spectrum-link] Design Language's grid system.
@@ -19,19 +20,11 @@ In the world of the Spectrum design language, regardless of whether you are maki
 
 It is not meant to be used for the chrome/frame of the experience. For example, the navigation or any left/right locked panels.
 
-Clear examples of do's and do not's can be found in the official Spectrum documentation. Please **do not** use the grid for the [application frame](https://spectrum.corp.adobe.com/application-frame.html). Please **do** us it for [things within the frame](https://spectrum.corp.adobe.com/grid.html#offsetting-the-grid).
+Clear examples of do's and do not's can be found in the official Spectrum documentation.
 
 ### Browser Support
 
-This grid officially supports all browsers that implement CSS Grid Level 1. For a list of the known CSS Grid bugs that we have addressed, see [this issue](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/5).
-
-We have decided against [IE 11 support](https://git.corp.adobe.com/betts/spectrum-css-grid/issues/7) for the time being.
-
-[Can I Use css-grid?](http://caniuse.com/#feat=css-grid) Data on support for the css-grid feature across the major browsers from caniuse.com.
-
-![Data on support for the css-grid feature across the major browsers from caniuse.com](https://res.cloudinary.com/ireaderinokun/image/upload/v1554434874/caniuse-embed/css-grid-2019-4-5.png)
-
-*CanIUse screenshot last updated April 4, 2019*
+This grid officially supports all browsers that implement CSS Grid Level 1 and Custom Properties. Refer to [Can I Use: css-grid](http://caniuse.com/#feat=css-grid) for current stats. Note that only unprefixed implementations are supported. 
 
 ### Getting started
 
@@ -60,19 +53,10 @@ CSS
 
 The magic of CSS Grid is that once Spectrum sets up the underlying structure of the container, you are free to do whatever you want with standard CSS properties. To learn about how to work effectively with the grid, watch Rachel Andrew's quick video tutorial series: https://gridbyexample.com/video/
 
-## Learn More
-
-For [general information](https://git.corp.adobe.com/Spectrum/README) about the projects in this org, how to communicate with the development team, where to file issues, or how to contribute, please check out the generic [Spectrum/README](https://git.corp.adobe.com/Spectrum/README) information.
-
-Thanks - Adobe Design Frameworks
-
-[spectrum-link]: http://spectrum.corp.adobe.com
-[topdoc-link]: https://github.com/Topdoc/topdoc/wiki
-
 ## Contributing
 
-Contributions are welcomed! Read the Contributing Guide for more information.
+Contributions are welcomed! Read the [Contributing Guide](CODE_OF_CONDUCT.md) for more information.
 
 ## Licensing
 
-This project is licensed under the Apache V2 License. See LICENSE for more information.
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
