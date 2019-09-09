@@ -1,5 +1,5 @@
 {
-  "name": "@spectrum/spectrum-css-grid",
+  "name": "@adobe/spectrum-css-grid",
   "version": "0.5.0",
   "description": "CSS Grid specs as defined in Spectrum DNA",
   "style": "dist/spectrum-css-grid.css",
