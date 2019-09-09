@@ -11,20 +11,19 @@
     "clean": "rimraf dist/",
     "build": "run-s clean build:*",
     "build:gulp": "gulp",
-    "bump": "dna-npm-bump-version",
-    "release": "npm run build && npm run bump"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.corp.adobe.com:spectrum/spectrum-css-grid.git"
+    "url": "git@github.com:adobe/spectrum-css-grid.git"
   },
   "keywords": [
     "spectrum",
     "grid",
     "css"
   ],
-  "author": "Grp-AD-Spectrum-Team <Grp-AD-Spectrum-Team@adobe.com>",
-  "license": "SEE LICENSE IN LICENSE",
+  "author": "Garth Braithwaite <garthdb@gmail.com> (https://garthdb.com)",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@adobe/spectrum-css": "^2.13.0",
     "autoprefixer": "^9.5.0",
